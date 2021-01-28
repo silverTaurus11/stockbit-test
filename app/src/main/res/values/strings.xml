@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Stockbit Test</string>
+    <string name="title_home">Home</string>
+    <string name="title_stream">Stream</string>
+    <string name="title_search">Search</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_portfolio">Portfolio</string>
+    <string name="title_splash">Splash</string>
+    <string name="title_login">Login</string>
+    <string name="title_main">Main</string>
+    <string name="no_internet_connection">Tidak ada koneksi internet</string>
+    <string name="failed_request">Gagal mendapatkan data, silahkan coba lagi…</string>
+    <string name="masuk">Masuk</string>
+    <string name="masuk_dengan_google">Masuk dengan Google</string>
+    <string name="masuk_dengan_facebook">Masuk dengan Facebook</string>
+    <string name="atau">Atau</string>
+    <string name="username_or_email">Username or Email</string>
+    <string name="password">Password</string>
+    <string name="lupa_password">Lupa Password</string>
+    <string name="login">Login</string>
+    <string name="masuk_dengan_fingerprint">Masuk dengan Fingerprint</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="daftar_sekarang">Daftar Sekarang</string>
+    <string name="username_is_required">Harap periksa username kamu</string>
+    <string name="password_is_required">Password minimum 6 digit</string>
+    <string name="view_profile">View Profile</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="log_out">Log Out</string>
+    <string name="ok_label">OK</string>
+    <string name="cancel_label">Batal</string>
+    <string name="logout_dialog">Apa kamu yakin ingin logout?</string>
+</resources>

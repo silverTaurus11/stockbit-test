@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="AALI"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+    <TextView
+        android:id="@+id/fullname_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Astra Agro Astari Tbk"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_view"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        tools:ignore="SpUsage" />
+    <TextView
+        android:id="@+id/price_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="9,050"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+    <TextView
+        android:id="@+id/change_per_hour_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+200"
+        tools:textColor="@color/eucalyptus"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/change_per_hour_in_percent_view"
+        app:layout_constraintTop_toBottomOf="@id/price_view"/>
+    <TextView
+        android:id="@+id/change_per_hour_in_percent_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="(+0.69%)"
+        tools:textColor="@color/eucalyptus"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_view"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/whisper"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_per_hour_in_percent_view"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

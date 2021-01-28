@@ -12,6 +12,7 @@ import com.project.bibit_test.Utils
 import com.project.bibit_test.data.source.local.sharedpref.LOGIN_VIA_NORMAL
 import com.project.bibit_test.data.source.local.sharedpref.model.ProfileItem
 import com.project.bibit_test.databinding.FragmentLoginBinding
+import com.project.bibit_test.helper.EspressoIdlingResource
 import com.project.bibit_test.ui.viewBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -26,6 +27,9 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         initButtonListener()
         initFormValidationObserver()
         initBackPressed()
+        if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
+            EspressoIdlingResource.decrement()
+        }
     }
 
     private fun initUserAlreadyLogin(){
@@ -38,8 +42,6 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
 
     private fun initButtonListener(){
         binding.loginButton.setOnClickListener {
-            binding.usernameEditLayout.error = null
-            binding.passwordEditLayout.error = null
             loginViewModel.doLogin(ProfileItem(
                     binding.usernameEditText.text.toString().trim(),
                     binding.passwordEditText.text.toString().trim(),
@@ -56,9 +58,9 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         loginViewModel.formValidation.observe(viewLifecycleOwner, Observer {
             when(it){
                 LoginViewModel.Validation.USERNAME_INVALID ->
-                    binding.usernameEditLayout.error = getString(R.string.username_is_required)
+                    binding.usernameEditText.error = getString(R.string.username_is_required)
                 LoginViewModel.Validation.PASSWORD_INVALID ->
-                    binding.passwordEditLayout.error = getString(R.string.password_is_required)
+                    binding.passwordEditText.error = getString(R.string.password_is_required)
                 else -> return@Observer
             }
         })

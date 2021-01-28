@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.project.bibit_test.R
 import com.project.bibit_test.databinding.FragmentSplashBinding
+import com.project.bibit_test.helper.EspressoIdlingResource
 import com.project.bibit_test.ui.viewBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -19,6 +20,7 @@ class SplashFragment: Fragment(R.layout.fragment_splash) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        EspressoIdlingResource.increment()
         splashViewModel.isUserAlreadyLogin.observe(viewLifecycleOwner, Observer {
             Handler(Looper.getMainLooper()).postDelayed({
                 if(it){
